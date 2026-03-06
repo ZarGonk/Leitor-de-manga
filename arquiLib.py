@@ -16,9 +16,7 @@ def file_exists(name):
 def create_file(name):
     """
     Cria um novo arquivo com o nome especificado, se ele ainda não existir.
-
     Parâmetros:  name (str): O nome (ou caminho) do novo arquivo.
-
     Retorna:     None
     """
     if not file_exists(name):
@@ -53,4 +51,3 @@ def copy_file(source, destination):
             print(f'Arquivo copiado de {source} para {destination} com Sucesso!')
         except Exception as error:
             print(f'Erro ao copiar arquivo: {error}')
-
