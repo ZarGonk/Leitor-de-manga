@@ -132,22 +132,21 @@ def reset_manga(_name):
         print(f"Erro: {e}")
 
 if __name__ == '__main__':
-    while True:
-        ensure_manga_folder()
-        if not file_exists(name_file):
-            create_file(name_file)
+    ensure_manga_folder()
 
-        normalize_manga()
+    if not file_exists(name_file):
+        create_file(name_file)
 
-        name = input('Informe o nome do manga/manhwas: ')
+    normalize_manga()
 
-        if check_read_manga(name):
-            if ask_registration("Deseja reiniciar o manga/manhwa"):
-                reset_manga(name)
+    name = input('Informe o nome do manga/manhwas: ')
 
-        else:
-            if ask_registration("Deseja cadastrar"):
-                chapter = read_positive_int()
-                register_new_manga(name, chapter)
-        print('\nAté mais cowboy!')
+    if check_read_manga(name):
+        if ask_registration("Deseja reiniciar o manga/manhwa"):
+            reset_manga(name)
 
+    else:
+        if ask_registration("Deseja cadastrar"):
+            chapter = read_positive_int()
+            register_new_manga(name, chapter)
+    print('\nAté mais cowboy!')
