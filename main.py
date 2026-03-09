@@ -1,7 +1,7 @@
 import os
 from arquiLib import *
 
-name_file = "Lista Mangas"
+name_file = "Lista Mangas/Manhwas"
 
 def ensure_manga_folder():
     # Pega o user local
