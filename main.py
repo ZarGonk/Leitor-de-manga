@@ -4,6 +4,7 @@ from arquiLib import *
 name_file = "Lista Mangas/Manhwas"
 
 def ensure_manga_folder():
+    ## Melhor solução ???Ver melhoria
     # Pega o user local
     username = os.environ.get('USERNAME')
     try:
@@ -95,6 +96,7 @@ def register_new_manga(_name, _chapter=0):
 
 
 def ask_registration(text):
+    # Melhora esta ruim
     while True:
         registers = input(f"{text} (Y/N)? ").strip()
         if registers.upper() == "Y":
